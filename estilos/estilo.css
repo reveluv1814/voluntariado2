@@ -1,0 +1,859 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,300&display=swap%27');
+@import url('https://fonts.cdnfonts.com/css/baloo-thambi');
+@import url('https://fonts.cdnfonts.com/css/baloo');
+/*importa el tipo de fuente o tipo de letra*/
+*{
+    margin: 0;  /*prepara el lienzo de la pagina*/
+    padding: 0;
+}
+#cabecera{
+    width: 100%; /*//ancho*/
+    height: 70px; /*/alto*/
+    background:  #FF9820; /*/color a la estructura NO CONTENIDO*/
+
+    position: -webkit-sticky; /* importa sticky*/
+    position: sticky; /*posiciona a la estructura de forma en que no se pierda al bajar el scroll del ratón*/
+    top: 0; /*modifica el margin top*/
+    z-index: 1; /*trae al frente la estructura ya que por defecto lo tiene al fondo*/
+
+
+}
+
+.logo{
+    /*este llamado a la estructura  modifica el estilo escribiendo el nombre de tipo clase, se pone "." para hacer referencia al, tipo en este caso es una clase */
+    background-image: url('../imagenes/dup.png');/*fondo de tipo imagen*/
+    background-repeat: no-repeat; /*para que no se repita la imagen*/
+    background-size: 150px; /*tamaño al fondo*/
+    width: 120px; /*ancho*/
+    height: 70px; /*alto*/
+    cursor: pointer; /*cuando este sobre la imagen cambie el cursor*/
+    display: inline-block; /*modifica su posicion en un bloque osea para que este en una sola linea*/
+}
+#cabecera ul{
+    float: right; /*modifica su posicionamiento, en este caso lo modifica llevandolo a la izquierda*/
+    margin-right: 20px; /*da un margen a la izquierda de 20px*/
+}
+#cabecera ul li{
+    line-height: 55px; /*espacio entre palabras de 55px*/
+    display: inline-block; /*alinea las etiquetas li en una linea*/
+    margin: 0 5px; /*da margen: top de 0 , 5px hacia la derecha */
+    margin-top: 10px;
+}
+#cabecera ul li a{
+    text-decoration: none; /*elimina el subrayado del enlace que viene por defecto*/
+    color: #fcfcfc; /*da color a las letras*/
+    font-size: 15px;/*cambia el tamaño de las letras*/
+    padding: 15px 13px; /*da relleno: en top de 7px, hacia la derecha de 13px*/
+    padding-top: 26px;
+    font-family: 'Poppins', sans-serif; /*cambia el tipo de fuente*/
+    border-radius: 3px; /*da un borde redondo de 3px*/
+    text-transform: uppercase; /*convierte el texto a mayusculas*/
+}
+
+#cabecera ul li:hover{
+    border-bottom: 3.5px solid #CC561E;
+}
+#cabecera ul li a:hover{
+    background: #FFCC1D;
+}
+/*icono*/
+.checkbtn{
+    font-size: 30px;
+    color: #FFF;
+    float: right;
+    line-height: 57px;
+    margin-right: 35px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+#dup1{
+    display: none;  
+}
+
+@media (max-width: 952px){
+    .logo{
+        padding-left: 50px;
+    }
+    #cabecera ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 852px){
+    .checkbtn{
+        display: block;
+    }
+    #dup1{
+        display: block;
+        width: 500px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    #cabecera ul{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        background:#d35400;
+        z-index: 1;
+        top:68px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    #cabecera .lista{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        text-align: center; 
+    }
+    #dupli{
+        margin-top:0;
+        margin: 0 0;
+        padding:0;
+        top: 0;
+    }
+
+    #cabecera ul li:hover{
+        border: none;
+    }
+    #cabecera ul li a{
+        font-size:20px;
+    }
+    #cabecera ul li a:hover, #cabecera ul li a:active{
+        background: #FFCC1D;
+        color: #fff;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+#fondo{
+    width: 100%; /*ancho*/
+    height: 89.5vh;/*alto*/
+    background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(../imagenes/dog.jpg); /*linerar hace el sombreado, url direcciona la imagen*/
+    background-position: center; /*posiciona la imagen de fondo en le centro*/
+    background-size: cover; /* da tamaño a la imagen de fondo segun el tamallo de pantalla*/
+    position: relative; /*posiciona la estructura (ojo la estructura) en una posicion relativa*/
+    background-attachment: fixed;
+}
+
+#titulo{
+    font-size: 70px; /*modifica el tamaño de letra a 70 px*/
+    padding-top: 30px; /*da un relleno en la parte de arriba a la estructura de 100 px*/
+    padding-left: 60px; /*da un relleno en la parte derecha a la estructura de 60 px*/
+    color: #fcfcfc; /*da color al contenido de la estructura*/
+    font-family: 'Poppins', sans-serif; /*cambia el tipo de letra*/
+    letter-spacing: 10px; /*da espacio entre letras */
+}
+#fondo p{
+    margin-top: 50px; /*da un margen en la parte superior de 50px*/
+    margin-left: 60px; /*da un margen en la parte derecha de 60 px*/
+    font-size: 25px; /*modfica el tamaño de letra*/
+    color: #fcfcfc; /*cambia el color del contenido de la estructura*/
+    font-family: 'Poppins', sans-serif;/*cambia el tipo de letra*/
+    font-weight: 300; /*cambia el grosor de la letra*/
+    letter-spacing: 2px; /*da espacio entre letras*/
+    line-height: 40px; /**/
+}
+
+#fondo .button{
+    background: #00A19D;
+    border: none;
+    padding: 17px 25px;
+    color: #fff;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin: 50px 0 0 75px;
+    text-align: center;
+    box-shadow: -13px 0px 0px -2px #FF2442;
+    cursor: pointer;
+}
+#fondo .button:hover{
+    box-shadow: 0 0 0 0;
+    background: #61B15A;
+    color: black;
+}
+#fondo .button:active{
+    background: #BB2205;
+}
+
+/*fondo responsivo*/
+@media (max-width: 570px){
+    #fondo{
+        position: relative;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: 300%;
+        height: auto;
+        background-position-x: center;
+    }
+    #fondo #titulo{
+        margin-bottom: 30px;
+        font-family: 'BalooThambi', sans-serif;
+        font-weight: 100;
+        font-size: 41px;
+        padding-left: 0;
+        letter-spacing: normal;
+        line-height: 55px;
+        text-align: center;
+    }
+    #fondo p{
+        margin: 50px 21px 0 21px ;
+        font-size: 20px; /*modfica el tamaño de letra*/
+        color: #fff; /*cambia el color del contenido de la estructura*/
+        font-weight: 200; /*cambia el grosor de la letra*/
+        letter-spacing: 1px; /*da espacio entre letras*/
+        line-height: 25px; /**/
+        text-align: center;
+    }
+    #fondo .button{
+        font-size:17px;
+        background-color: transparent;
+        border: 3px solid rgba(22,160,133,0.67);
+        margin-left: 70px;
+        margin-right: 0;
+        margin-top: 30px;
+        box-shadow: none;
+        font-family: 'BalooThambi', sans-serif;
+    }
+    #fondo #but1{
+        margin-left: 80px;
+    }
+    #fondo #but2{
+        margin-left: 70px;
+        margin-bottom: 30px;
+    }
+    #fondo .button:hover,#fondo .button:active, #fondo .button:focus{
+        background-color: #e05d5d;
+        color: #fff;
+    }
+
+}
+
+
+
+
+
+
+
+
+#info{
+    background-color: #E1EFD0;
+    position: relative;
+}
+.container{
+    padding-top: 30px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    position: relative;
+    width: 300px;
+    margin: 20px;
+
+}
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 20px 10px #B3B3B3;
+    border-radius: 15px;
+}
+.overlay{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #C84B31;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 15px;
+
+}
+.card:hover .overlay{
+    bottom: 0;
+    height: 100%;
+}
+.text{
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  width: 80%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.overlay button{
+    width: 50%;
+    margin-top: 48%;
+    margin-left: 25%;
+    padding: 8px 9px;
+    cursor: pointer;
+
+    border: none;
+    background: #577BC1;
+    text-align: center;
+    color: #fff;
+    font-family: 'Baloo Thambi', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: -13px 0px 0px 0px #EBE645;
+}
+
+/* info responsivo*/
+@media (max-width: 570px){
+    #info .container{
+        height: auto; 
+        padding-bottom: 40px;  
+    }
+    .text{
+        font-size: 13px; 
+    }
+    .overlay button{
+        box-shadow: none;
+        background-color: #577bc1a6;
+        
+        border: 2px solid rgba(235,230,69,0.67);
+    }
+    .overlay button:hover{
+        background: #577bc1a6;
+    }
+    .overlay button:active, .overlay button:focus{
+        background: #577bc1;
+    }
+}
+
+
+
+#intro{
+    padding: 0;
+}
+#intro .intro-container .row{
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+}
+#intro .intro-container .imgblock{
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+    float: right;
+    background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(../imagenes/fondocat.jpg); /*linerar hace el sombreado, url direcciona la imagen*/
+    background-position: center; /*posiciona la imagen de fondo en le centro*/
+    background-size: cover; /* da tamaño a la imagen de fondo segun el tamallo de pantalla*/
+    position: relative; /*posiciona la estructura (ojo la estructura) en una posicion relativa*/
+    background-attachment: fixed;
+}
+#intro .intro-container .row .block h2{
+    margin: 30px 0 0 50px;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+    letter-spacing: 2px;
+     line-height: 30px;
+     padding-top: 40px;
+}
+#intro .intro-container .row .block p{
+    color: #7B7B7B;
+    margin: 0 0 0 50px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding-top: 20px;
+}
+#intro .intro-container .imgblock img{
+    width: 530px;
+    height: 300px;
+    margin: 70px 0 0 70px;
+    transition: opacity 0.7s, transform 2.5s;
+}
+#intro .intro-container .imgblock .img1:hover{
+    transform: scale3d(1.1,1.2,1.1 ) rotate(7deg);
+}
+#intro .intro-container .row .section-title{
+    margin-bottom: 0px;
+    padding-right: 30px;
+}
+/*siguiente fila*/
+
+#intro .intro-container .blocktext{
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+}
+#intro .intro-container .videoblock{
+    width: 50%;
+    height: 500px;
+    float: left;
+    background-color: #E05D5D;
+    background-size: cover; /* da tamaño a la imagen de fondo segun el tamallo de pantalla*/
+    position: relative; /*posiciona la estructura (ojo la estructura) en una posicion relativa*/
+    background-attachment: fixed;
+}
+#intro .intro-container .blocktext .section-title{
+    margin-bottom: 0px;
+    padding-right: 30px;
+}
+#intro .intro-container .blocktext .block h2{
+    margin: 30px 0 0 50px;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+    letter-spacing: 2px;
+     line-height: 55px;
+     padding-top: 40px;
+}
+#intro .intro-container .blocktext .block p{
+    color: #7B7B7B;
+    margin: 0 0 0 50px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding-top: 20px;
+}
+#intro .intro-container .videoblock video{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 12px 3px rgba(38,38,38,0.65);
+}
+/*siguiente fila*/
+#intro .intro-container .videoblock2{
+    width: 50%;
+    height: 500px;
+    float: right;
+    background-color: #F6D167;
+    background-size: cover; /* da tamaño a la imagen de fondo segun el tamallo de pantalla*/
+    position: relative; /*posiciona la estructura (ojo la estructura) en una posicion relativa*/
+    background-attachment: fixed;
+}
+#intro .intro-container .videoblock2 video{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 12px 3px rgba(38,38,38,0.65);
+}
+
+#intro .intro-container .blocktext2{
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+}
+#intro .intro-container .blocktext2 .section-title{
+    margin-bottom: 0px;
+    padding-right: 30px;
+}
+#intro .intro-container .blocktext2 .block h2{
+    margin: 20% 0 0 50px;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+    letter-spacing: 2px;
+     line-height: 55px;
+     padding-top: 40px;
+}
+#intro .intro-container .blocktext2 .block p{
+    color: #7B7B7B;
+    margin: 0 0 0 50px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+@media(max-width: 570px){
+    #intro{
+        padding: 0;
+    }
+    #intro .intro-container .row{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    #intro .intro-container .imgblock{
+        width: 100%;
+        height: 250px;
+        text-align: center;
+        background-position: center;
+        background-position-y: 10%;
+        background-position-x: 70%;
+        background-size:350%;    
+    }
+    #intro .block h2{
+        margin-left: 20px;
+        margin-top: 0;
+        font-size: 23px;
+    }
+    #intro .block p{
+        margin-left: 20px;
+        margin-right: 10px ;
+        font-size: 13px;
+        line-height: 28px;
+        letter-spacing: 2px;
+    }
+    #intro .intro-container .imgblock img{
+        width: 100%;
+        height: 80%;
+        margin: 0;   
+        transition: unset;
+        margin-top: 20px;
+
+        
+    }
+    #intro .intro-container .imgblock .img1:hover{
+        transform: none;
+    }
+
+    /*sig fila*/
+
+    #intro .intro-container .blocktext{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    #intro .intro-container .videoblock{
+        width: 100%;
+        height: 400px;
+    }
+    #intro .intro-container .blocktext .section-title{
+        margin-bottom: 0px;
+        padding-right: 30px;
+    }
+    #intro .intro-container .blocktext .block h2{
+        margin-left: 45px;
+        margin-top: 0;
+        font-size: 35px;
+        line-height: 45px; 
+    }
+    #intro .intro-container .blocktext .block p{
+        margin-left: 45px;
+        margin-right: 10px;
+        font-size: 15px;
+        line-height: 32px;
+        letter-spacing: 2px;
+    }
+    /*sig fila*/
+    #intro .intro-container .blocktext2{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    #intro .intro-container .videoblock2{
+        width: 100%;
+        height: 300px;
+    }
+    #intro .intro-container .blocktext2 .block h2{
+        margin-left: 45px;
+        margin-top: 0;
+        font-size: 35px;
+        line-height: 45px; 
+    }
+    #intro .intro-container .blocktext2 .block p{
+        margin-left: 45px;
+        margin-right: 10px;
+        font-size: 15px;
+        line-height: 32px;
+        letter-spacing: 2px;
+    }
+
+}
+
+
+
+
+/*reflexion*/
+.reflexion{
+    width: 100%; /*ancho*/
+    height: 65.5vh;/*alto*/
+    background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(../imagenes/dogfondo.jpg); /*linerar hace el sombreado, url direcciona la imagen*/
+    background-size: cover; /* da tamaño a la imagen de fondo segun el tamallo de pantalla*/
+    position: relative; /*posiciona la estructura (ojo la estructura) en una posicion relativa*/
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    background-position-y: 30%; /*mueve verticalmente la imagen de fondo*/
+
+}
+.reflexion h3{
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    letter-spacing: 3px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+/*reflexion responsivo*/
+
+@media(max-width: 570px){
+    .reflexion{
+        width: 100%;
+        height: 280px;
+        padding: 0;
+        background-size: 270%;
+        position: relative;
+        background-position: center;
+        background-position-y: 160%;
+    }
+    .reflexion h3{
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+    
+    }
+
+}
+
+
+
+/*div de contacto mapa*/
+#contacto{
+    padding: 0;
+}
+#contacto #contacto-container{
+    background-color: #297F87;
+    padding: 30px 30px;
+    height: 450px;
+}
+#contacto #contacto-container iframe{
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    float: left;
+}
+#contacto #contacto-container #textcontact{
+    float: left;
+    padding: 0px 20px;
+    font-family: 'BalooThambi', sans-serif;
+    color: #fff;
+    text-align: center;  
+}
+#textcontact h3{
+    font-size: 50px;
+    margin-left: 10px;
+
+}
+#textcontact h4{
+    font-size: 40px;
+    font-weight: 200;
+}
+#textcontact #contenidocontacto{
+    width: 80%;
+    height: 40%;
+    padding: 30px 20px;
+    background-color: #e05d5d;
+    margin-top: 10px;
+    margin-left: 13%;
+    border-radius: 30px;
+}
+#contenidocontacto p{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 45px;
+}
+#contenidocontacto i{
+    margin-right: 10px;
+    font-size: 30px;
+}
+#contenidocontacto h5{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+/*contacto responsivo*/
+@media(max-width: 570px){
+    #contacto #contacto-container{
+        padding: 20px 20px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+    }
+    #contacto #contacto-container iframe{
+        width: 100%;
+        height: 250px;  
+    }
+    #contacto #contacto-container #textcontact{
+        padding: 0 0;
+        margin:0;
+    }
+    #textcontact h3{
+        font-size: 20px;
+        margin: 0;
+        margin-top: 22px;
+        letter-spacing: 2px;
+    }
+    #textcontact h4{
+        font-size: 15px;
+        font-weight: 200;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 10px;
+    }
+    #textcontact #contenidocontacto{
+        
+        width:  95%;
+        height: auto;   
+        margin: 0 0 0 0;
+        padding: 20px 10px;
+    }
+    #contenidocontacto p{
+        font-size: 14px;
+        line-height: 35px;
+        font-weight: 100;
+    }
+    #contenidocontacto i{
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    #contenidocontacto h5{
+        font-size: 15px;
+        margin-top: 10px;
+        font-family: 'BalooThambi', sans-serif;
+    }
+
+}
+
+
+/*footer*/
+footer{
+    background-color: #363636;
+}
+.footer-container{
+    padding-top: 30px;
+}
+.footer-intro{
+    text-align: center;   
+}
+.footer-intro h3{
+    font-size: 50px;
+    font-family: 'BalooThambi', sans-serif;
+    color: #fff;
+    font-weight: 300;
+}
+.footer-intro h5{
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 100;
+}
+.footer-intro img{
+    width: 30%;
+    height: 20%;
+}
+.redessol{
+    text-align: center;
+    margin-top: 20px;
+}
+.fenlaces{
+    background-color: transparent;
+    color: #e67e22;
+    padding:8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 2%;
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    text-align: center;
+}
+.fenlaces i{
+    font-size:40px ;
+    line-height: 50px;
+}
+.fenlaces:last-child{
+    margin-right: 0;
+}
+.fenlaces:hover,.fenlaces:focus{
+    color: #fff;
+    background-color: #e67e22;
+}
+.footer-copy{
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+#topBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 55px;
+    height: 55px;
+    background: #ef5030;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 30px;
+}
+
+/*footer responsivo*/
+@media (max-width: 570px){
+    .footer-intro h3{
+        font-size: 20px;
+    }
+    .footer-intro h5{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .footer-intro img{
+        width: 60%;
+        height: 50%;
+    }
+    .redessol{
+        margin-top: 5px;
+    }
+    .fenlaces{
+        width: 22px;
+        height: 22px;
+    }
+    .fenlaces i{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .footer-copy{
+        font-size: 0.8rem;
+    }
+    #topBtn{
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+}
